@@ -1,3 +1,17 @@
-
+# Chrome
 from selenium import webdriver
-webdriver.Chrome()
+driver = webdriver.Chrome('C:\Windows\chromedriver')
+driver.get('http://www.google.com/')
+driver.quit()
+
+# Firefox
+from selenium import webdriver
+driver = webdriver.Firefox('C:\Windows\geckodriver')
+driver.get('http://www.google.com/')
+driver.quit()
+
+# Edge
+from selenium import webdriver
+driver = webdriver.Edge('C:\Windows\msedgedriver')
+driver.get('http://www.google.com/')
+driver.quit()
