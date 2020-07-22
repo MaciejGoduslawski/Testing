@@ -1,0 +1,19 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+driver = webdriver.Chrome(executable_path="C:\Chromedriver\chromedriver.exe")
+driver.get("https://www.google.com")
+driver.maximize_window()
+
+search_input = driver.find_element_by_css_selector("#tsf > div:nth-child(2) > div.A8SBwf > div.RNNXgb > div > div.a4bIc > input")
+search_input.send_keys("testerzy.pl")
+search_input.send_keys(Keys.ENTER)
+
+web_element = driver.find_element_by_css_selector("#rso > div:nth-child(1) > div > div > div.r > a > h3")
+web_element.click()
+
+search_bar = driver.find_element_by_id("sb-search")
+search_bar.click()
+search_payment = driver.find_element_by_css_selector("#phrase")
+search_payment.send_keys("zarobki testerów 2014")
+search_payment.send_keys(Keys.ENTER)
